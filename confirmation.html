@@ -16,10 +16,6 @@
         const price = localStorage.getItem("orderPrice");
         const qty = localStorage.getItem("totalQuantity");
 
-        localStorage.removeItem("orderItems");
-        localStorage.removeItem("orderPrice");
-        localStorage.removeItem("totalQuantity");
-
         const container = document.getElementById("order-summary");
 
         if (items.length === 0) {
@@ -36,6 +32,10 @@
         <p>Całkowita liczba produktów: ${qty}</p>`
                 ;
             container.innerHTML = html;
+            
+            localStorage.removeItem("orderItems");
+            localStorage.removeItem("orderPrice");
+            localStorage.removeItem("totalQuantity");
         }
     </script>
 </body>
