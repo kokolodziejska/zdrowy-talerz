@@ -1,4 +1,4 @@
-import { useNavigate, Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 import { useSelector } from 'react-redux';
 import { useDispatch } from "react-redux";
@@ -10,7 +10,6 @@ import Footer from "../components/Fotter";
 
 function SummaryPage() {
 
-    const navigate = useNavigate();
     const cartItems = useSelector((state: any) => state.cart.items);
     const cartItemNumber = useSelector((state: any) => state.cart.totalQuantity);
     const dispatch = useDispatch();

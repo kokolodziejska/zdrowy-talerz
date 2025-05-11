@@ -2,7 +2,7 @@ import { useNavigate, Link } from "react-router-dom";
 
 import { useSelector } from 'react-redux';
 import { useDispatch } from "react-redux";
-import { deleteItem, increaseQuantity, decreaseQuantity, setQuantity } from "../features/cartStore";
+import { deleteItem, increaseQuantity, decreaseQuantity } from "../features/cartStore";
 import Header from "../components/Header";
 import Footer from "../components/Fotter";
 
