@@ -13,8 +13,12 @@
     <a href="/zdrowy-talerz/">Wróć do strony produktów</a>
     <script>
         const items = JSON.parse(localStorage.getItem("orderItems")) || [];
-        const price = localStorage.getItem("totalPrice");
+        const price = localStorage.getItem("orderPrice");
         const qty = localStorage.getItem("totalQuantity");
+
+        localStorage.removeItem("orderItems");
+        localStorage.removeItem("orderPrice");
+        localStorage.removeItem("totalQuantity");
 
         const container = document.getElementById("order-summary");
 
