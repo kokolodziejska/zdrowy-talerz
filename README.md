@@ -27,3 +27,5 @@ npm install
 ```bash
 npm run dev
 ```
+
+Kornelia_Kołodziejska_Web_Wrocław
