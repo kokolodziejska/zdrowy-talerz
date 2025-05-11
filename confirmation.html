@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Zamówienie złożone</title>
+    <link rel="stylesheet" href="/zdrowy-talerz/confirmation.css" />
+</head>
+
+<body>
+    <h1 class="">Zamówienie złożone pomyślnie!</h1>
+    <div id="order-summary"></div>
+    <a href="/">Wróć do strony produktów</a>
+    <script>
+        const items = JSON.parse(localStorage.getItem("orderItems")) || [];
+        const price = localStorage.getItem("totalPrice");
+        const qty = localStorage.getItem("totalQuantity");
+
+        const container = document.getElementById("order-summary");
+
+        if (items.length === 0) {
+            container.innerText = "Brak danych o zamówieniu.";
+        } else {
+            const html = `
+    
+        <p>Zamówione produkty: </p>
+      <ul>
+        ${items.map(item => `<li>${item.name} – ${item.quantity} szt.</li>`).join("")}
+      </ul>
+   
+        <p>Całkowita kwota: ${price} zł</p>
+        <p>Całkowita liczba produktów: ${qty}</p>`
+                ;
+            container.innerHTML = html;
+        }
+    </script>
+</body>
+
+</html>
