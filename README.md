@@ -1,4 +1,6 @@
 # Zdrowy Talerz – sklep internetowy
+Kornelia_Kołodziejska_Web_Wrocław
+
 https://kokolodziejska.github.io/zdrowy-talerz/
 
 ## Opis i podejście
@@ -28,4 +30,4 @@ npm install
 npm run dev
 ```
 
-Kornelia_Kołodziejska_Web_Wrocław
+
